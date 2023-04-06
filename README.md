@@ -12,6 +12,8 @@ Collection of samples similar to those in the [OpenAI website](https://platform.
 - Access to [Azure OpenAI](https://learn.microsoft.com/azure/cognitive-services/openai/how-to/create-resource?pivots=web-portal) or [OpenAI](https://openai.com/)
 - [Polyglot Noteboks VS Code Extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-interactive-vscode)
 
+**NOTE: The Azure OpenAI Service and .NET SDK are currently in preview**
+
 ## Classification
 
 - [Classification](./classification.ipynb)
