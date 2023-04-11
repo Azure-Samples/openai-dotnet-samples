@@ -17,14 +17,25 @@ Collection of OpenAI samples written in .NET. Similar to the [OpenAI website sam
 
 1. Open repository in VS Code. To minimize setup, it's highly recommended you use [Codespaces](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=623607062&machine=basicLinux32gb&devcontainer_path=.devcontainer.json&location=EastUs)
 1. Configure environment variables.
-    1. Azure OpenAI Service - For more details on how to get these variables, see the [Azure OpenAI documentation](https://learn.microsoft.com/azure/cognitive-services/openai/quickstart?tabs=command-line&pivots=programming-language-csharp#retrieve-key-and-endpoint).
-        1. `AOAI_ENDPOINT` - The endpoint for your **Azure OpenAI Service** resource.
-        1. `AOAI_KEY` - The access key for your **Azure OpenAI Service** resource.
-        1. `AOAI_DEPLOYMENTID` - The name of your model deployment (`davinci-003-deployment`).
-    1. OpenAI
-        1. `AOAI_KEY` - The API key for your **OpenAI** account. For more details on getting your API keys, see the [OpenAI documentation](https://platform.openai.com/docs/guides/production-best-practices/api-keys). 
-        2. `AOAI_DEPLOYMENTID` - The model name (i.e. `text-davinci-003`). For more details on models, see [OpenAI model](https://platform.openai.com/docs/models/gpt-3-5) documentation.
-1. Choose a notebook and run it.
+    1. Open the *devcontainer.json* file
+    1. Replace the following values with your own:
+        
+        **Azure OpenAI Service** - For more details on how to get these variables, see the [Azure OpenAI documentation](https://learn.microsoft.com/azure/cognitive-services/openai/quickstart?tabs=command-line&pivots=programming-language-csharp#retrieve-key-and-endpoint).
+        
+        - `AOAI_ENDPOINT` - The endpoint for your **Azure OpenAI Service** resource.
+        - `AOAI_KEY` - The access key for your **Azure OpenAI Service** resource.
+        - `AOAI_DEPLOYMENTID` - The name of your model deployment (`davinci-003-deployment`).
+    
+        **OpenAI**
+
+        - `AOAI_KEY` - The API key for your **OpenAI** account. For more details on getting your API keys, see the [OpenAI documentation](https://platform.openai.com/docs/guides/production-best-practices/api-keys). 
+        - `AOAI_DEPLOYMENTID` - The model name (i.e. `text-davinci-003`). For more details on models, see [OpenAI model](https://platform.openai.com/docs/models/gpt-3-5) documentation.
+    1. Save your changes
+
+1. Rebuild the container
+    1. Open the command palette. In the menu bar, select *View > Command Palette*.
+    1. Enter the following command into the command palette*>Codespaces: Rebuild Container* 
+1. When your Codespace rebuilds, open a notebook and run it. 
 
 ## Azure OpenAI .NET SDK Notes
 
