@@ -14,41 +14,64 @@ Collection of samples similar to those in the [OpenAI website](https://platform.
 
 **NOTE: The Azure OpenAI Service and .NET SDK are currently in preview**
 
-## Classification
+## Examples
+
+### Classification
 
 - [Classification](./classification.ipynb)
 - [Extract keywords](./extract-keywords.ipynb)
 - [Tweet classifier](./tweet-classifier.ipynb)
 - [Advanced tweet classifier](./advanced-tweet-classifier.ipynb)
 
-## Generation
+### Generation
 
-- [Q&A](./qna.ipynb)
+- [Parse unstructured data](./parse-unstructured-data.ipynb)
+- [Table creator](./table-creator.ipynb)
+- [TL;DR summarization](./tldr-summarization.ipynb)
+- [Airport code extractor](./airport-code-extractor.ipynb)
+- [Extract contact information](./extract-contact-information.ipynb)
+- [Notes to summary](./notes-to-summary.ipynb)
 - [Grammar correction](./grammar-correction.ipynb)
 - [Summarize for 2nd grader](./summarize-second-grader.ipynb)
 - [Text to command](./text-to-command.ipynb)
 - [Ad from product description](./ad-product-description.ipynb)
 - [Product name generator](./product-name-generator.ipynb)
-- [TL;DR summarization](./tldr-summarization.ipynb)
 - [Science finction book list maker](./science-fiction-book-list-maker.ipynb)
-- [Airport code extractor](./airport-code-extractor.ipynb)
-- [Extract contact information](./extract-contact-information.ipynb)
 - [Micro horror story creator](./micro-horror-story-creator.ipynb)
 - [Essay outline](./essay-outline.ipynb)
 - [VR fitness idea generator](./vr-fitness-idea-generator.ipynb)
-- [Notes to summary](./notes-to-summary.ipynb)
 - [Recipe creator](./recipe-creator.ipynb)
 - [Turn by turn directions](./turn-by-turn-directions.ipynb)
 - [Restaurant review creator](./restaurant-review-creator.ipynb)
 - [Create study notes](./create-study-notes.ipynb)
-- [Interview questions](./create-interview-questions.ipynb)
+- [Create interview questions](./create-interview-questions.ipynb)
 
-## Translation
+
+### Translation
 
 - [Translate programming languages](./translate-programming-languages.ipynb)
 - [Translate English to other languages](./translate-english-other-languages.ipynb)
+- [Movie to Emoji](./movie-to-emoji.ipynb)
+- [Mood to color](./mood-to-color.ipynb)
+
+### Code
+
+- [C# Bug Fixer](./csharp-bug-fixer.ipynb)
+- [C# to Natural Language](./csharp-to-natural-language.ipynb)
+- [C# XML Comments](./csharp-xml-comments.ipynb) 
+- [Calculate Time Complexity](./calculate-time-complexity.ipynb)
+- [JavaScript helper chatbot](./javascript-helper-chatbot.ipynb)
 - [SQL translate](./sql-translate.ipynb)
 - [SQL request](./sql-request.ipynb)
+
+### Chat
+
+- [Q&A](./qna.ipynb)
+- [Factual Answering](./factual-answering.ipynb)
+- [Friend Chat](./friend-chat.ipynb)
+- [ML/AI language model tutor](./ml-ai-language-model-tutor.ipynb)
+- [Marv Sarcastic Bot](./marv-sarcastic-bot.ipynb)
+- [Open ended chat](./open-ended-chat.ipynb)
 
 ## Additional Resources
 
