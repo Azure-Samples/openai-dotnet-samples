@@ -20,34 +20,40 @@ Collection of OpenAI samples written in .NET. Similar to the [OpenAI website sam
 1. Open repository in VS Code. To minimize setup, it's highly recommended you use [Codespaces](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=623607062&machine=basicLinux32gb&devcontainer_path=.devcontainer.json&location=EastUs)
 1. Configure environment variables.
     1. Azure OpenAI Service - For more details on how to get these variables, see the [Azure OpenAI documentation](https://learn.microsoft.com/azure/cognitive-services/openai/quickstart?tabs=command-line&pivots=programming-language-csharp#retrieve-key-and-endpoint).
-        1. `AOAI_ENDPOINT` - The endpoint for your Azure OpenAI Service.
-        1. `AOAI_KEY` - The access key for your Azure OpenAI Service
+        1. `AOAI_ENDPOINT` - The endpoint for your **Azure OpenAI Service** resource.
+        1. `AOAI_KEY` - The access key for your **Azure OpenAI Service** resource.
         1. `AOAI_DEPLOYMENTID` - The name of your model deployment (`davinci-003-deployment`).
     1. OpenAI
-        1. `AOAI_DEPLOYMENTID` - The model name (i.e. `text-davinci-003`). For more details on models, see [OpenAI model](https://platform.openai.com/docs/models/gpt-3-5) documentation.
+        1. `AOAI_KEY` - The API key for your **OpenAI** account. For more details on getting your API keys, see the [OpenAI documentation](https://platform.openai.com/docs/guides/production-best-practices/api-keys). 
+        2. `AOAI_DEPLOYMENTID` - The model name (i.e. `text-davinci-003`). For more details on models, see [OpenAI model](https://platform.openai.com/docs/models/gpt-3-5) documentation.
 1. Choose a notebook and run it.
 
-## Service notes
+## Azure OpenAI .NET SDK Notes
 
-The following are things to be mindful of when using each of these model providers. For more information on each of the services, see the [comparing Azure OpenAI and OpenAI](https://learn.microsoft.com/azure/cognitive-services/openai/overview#comparing-azure-openai-and-openai) documentation.
+The following are things to be mindful of when using the Azure .NET SDK with each of the OpenAI model providers. For more information on each of the services, see the [comparing Azure OpenAI and OpenAI](https://learn.microsoft.com/azure/cognitive-services/openai/overview#comparing-azure-openai-and-openai) documentation.
 
 ### Azure OpenAI Service
 
 #### Deployment ID
 
-Deployments are a way to provide a user-friendly name for OpenAI models. 
+Deployments are a way to provide a user-friendly name for OpenAI models. These deployments are backed by OpenAI models such as *text-davinci-003*. When using the Azure OpenAI .NET SDK, your Deployment ID is the name you provided to your deployment, not the name of the OpenAI model.
 
 For more details, see the [deploy a model](https://learn.microsoft.com/azure/cognitive-services/openai/how-to/create-resource?pivots=web-portal#deploy-a-model) documentation.
 
 ### OpenAI
 
-#### Initialize client
+#### API Keys
 
-When initializing a client
+When initializing the client using OpenAI as the model service provider, the only credential you need to provide is your API key. Use the Azure OpenAI .NET SDK to initialize the client as follows:
 
-#### Model Name
+```csharp
+var AOAI_KEY = Environment.GetEnvironmentVariable("AOAI_KEY");
+var openAIClient = new OpenAIClient(AOAI_KEY);
+```
 
-Unlike Azure OpenAI Service, OpenAI doesn't use deployments. Instead, it uses the model names. All samples 
+#### Deployment ID
+
+Unlike Azure OpenAI Service, OpenAI doesn't use deployments. Instead, it uses the model names. The value of your `AOAI_DEPLOYMENTID` environment variable should be the name of the OpenAI model. For almost all of these samples, the model used is `text-davinci-003`.
 
 ## Settings
 
@@ -56,7 +62,7 @@ Unlike Azure OpenAI Service, OpenAI doesn't use deployments. Instead, it uses th
 | Model | The name of the OpenAI model. For more details, see the [Azure OpenAI models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) documentation  |
 | Max tokens | The maximum number of tokens to generate. The max tokens number can't exceed the number of tokens supported by the model. See the [Azure OpenAI models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models#model-summary-table-and-region-availability) documentation for more details on token limits |
 | Temperature | A value between 0 and 1 that lets you control how confident the model is when making predictions. Lower temperatures mean less randomness in completion output. |
-| Top p | 1 | A value between 0 and 1 that lets you control which tokens to consider in the results. For example a value of 0.1 means only the top 10% are considered. |
+| Top p | A value between 0 and 1 that lets you control which tokens to consider in the results. For example a value of 0.1 means only the top 10% are considered. |
 | Frequency penalty | A value between -2 and 2. Positive values penalize the text returned based on the frequency of a token frequency. This makes it so there's a lower likelihood of tokens repeating themselves. |
 | Presence penalty | A value between -2 and 2. Positive numbers increase the model's likelihood the text returned talks about new topics. |
 | Stop Sequence | String values that indicate when the model should stop generating new text. Returned text won't contain the stop sequence. |
