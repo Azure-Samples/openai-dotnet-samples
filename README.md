@@ -15,8 +15,6 @@ Collection of OpenAI samples written in .NET. Similar to the [OpenAI website sam
 
 ## Running samples
 
-**NOTE: The Azure OpenAI Service .NET SDK is currently in preview**
-
 1. Open repository in VS Code. To minimize setup, it's highly recommended you use [Codespaces](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=623607062&machine=basicLinux32gb&devcontainer_path=.devcontainer.json&location=EastUs)
 1. Configure environment variables.
     1. Azure OpenAI Service - For more details on how to get these variables, see the [Azure OpenAI documentation](https://learn.microsoft.com/azure/cognitive-services/openai/quickstart?tabs=command-line&pivots=programming-language-csharp#retrieve-key-and-endpoint).
@@ -29,6 +27,8 @@ Collection of OpenAI samples written in .NET. Similar to the [OpenAI website sam
 1. Choose a notebook and run it.
 
 ## Azure OpenAI .NET SDK Notes
+
+**NOTE: The Azure OpenAI Service .NET SDK is currently in preview**
 
 The following are things to be mindful of when using the Azure .NET SDK with each of the OpenAI model providers. For more information on each of the services, see the [comparing Azure OpenAI and OpenAI](https://learn.microsoft.com/azure/cognitive-services/openai/overview#comparing-azure-openai-and-openai) documentation.
 
