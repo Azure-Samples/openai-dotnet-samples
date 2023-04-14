@@ -35,7 +35,7 @@ Collection of OpenAI samples written in .NET. Similar to the [OpenAI website sam
 1. Rebuild the container
     1. Open the command palette. In the menu bar, select **View > Command Palette**.
     1. Enter the following command into the command palette **>Codespaces: Rebuild Container**.
-1. When your Codespace rebuilds, open a notebook and run it. 
+1. When your Codespace rebuilds, open a notebook and run it. For more information on getting started with notebooks, see the [Polyglot Notebooks documentation](https://code.visualstudio.com/docs/languages/polyglot). 
 
 ## Azure OpenAI .NET SDK Notes
 
