@@ -80,6 +80,10 @@ Unlike Azure OpenAI Service, OpenAI doesn't use deployments. Instead, it uses th
 
 ## Examples
 
+### Tokenization
+
+- [Get token counts](./tokenization.ipynb)
+
 ### Classification
 
 - [Classification](./classification.ipynb)
