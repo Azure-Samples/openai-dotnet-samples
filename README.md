@@ -6,14 +6,19 @@ Collection of OpenAI samples written in .NET. Similar to the [OpenAI website sam
 
 [![Open in Remote - Containers](https://img.shields.io/static/v1?style=for-the-badge&label=Remote%20-%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/azure-samples/azure-search-openai-demo)
 
-## Prerequisites
+- [Prerequisites](#prereq)
+- [Running samples](#run)
+- [Samples](#samples)
+- [SDK Notes](#notes)
+
+## Prerequisites <div id="prereq"></div>
 
 - [Azure Account](https://aka.ms/free)
 - Access to [Azure OpenAI](https://learn.microsoft.com/azure/cognitive-services/openai/how-to/create-resource?pivots=web-portal) or [OpenAI](https://openai.com/)
 - [VS Code](https://code.visualstudio.com/Download)
 - [Polyglot Noteboks VS Code Extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-interactive-vscode)
 
-## Running samples
+## Running samples<div id="run"></div>
 
 1. Open repository in VS Code. To minimize setup, it's highly recommended you use [Codespaces](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=623607062&machine=basicLinux32gb&devcontainer_path=.devcontainer.json&location=EastUs)
 1. Configure environment variables.
@@ -37,7 +42,7 @@ Collection of OpenAI samples written in .NET. Similar to the [OpenAI website sam
     1. Enter the following command into the command palette **>Codespaces: Rebuild Container**.
 1. When your Codespace rebuilds, open a notebook and run it. For more information on getting started with notebooks, see the [Polyglot Notebooks documentation](https://code.visualstudio.com/docs/languages/polyglot). 
 
-## Azure OpenAI .NET SDK Notes
+## Azure OpenAI .NET SDK Notes <div id="notes"></div>
 
 **NOTE: The Azure OpenAI Service .NET SDK is currently in preview**
 
@@ -64,7 +69,7 @@ var openAIClient = new OpenAIClient(AOAI_KEY);
 
 #### Deployment ID
 
-Unlike Azure OpenAI Service, OpenAI doesn't use deployments. Instead, it uses the model names. The value of your `AOAI_DEPLOYMENTID` environment variable should be the name of the OpenAI model. For almost all of these samples, the model used is `text-davinci-003`.
+Unlike Azure OpenAI Service, OpenAI doesn't use deployments. Instead, it uses the model names. The value of your `AOAI_DEPLOYMENTID` environment variable should be the name of the OpenAI model. For almost all of these samples, the model used is `text-davinci-003`. For ChatGPT samples use `gpt-35-turbo`.
 
 ## Settings
 
@@ -78,7 +83,7 @@ Unlike Azure OpenAI Service, OpenAI doesn't use deployments. Instead, it uses th
 | Presence penalty | A value between -2 and 2. Positive numbers increase the model's likelihood the text returned talks about new topics. |
 | Stop Sequence | String values that indicate when the model should stop generating new text. Returned text won't contain the stop sequence. |
 
-## Examples
+## Examples <div id="samples"></div>
 
 ### Tokenization
 
@@ -131,6 +136,12 @@ Unlike Azure OpenAI Service, OpenAI doesn't use deployments. Instead, it uses th
 - [JavaScript helper chatbot](./javascript-helper-chatbot.ipynb)
 - [SQL translate](./sql-translate.ipynb)
 - [SQL request](./sql-request.ipynb)
+
+### ChatGPT
+
+**Note: These samples use GPT3.5 Turbo models**
+
+- [Hiking Recommendation Assistant](./chatgpt-hiking-recommendations.ipynb)
 
 ### Chat
 
