@@ -12,5 +12,5 @@
         "AOAI_ENDPOINT": "",
         "AOAI_KEY": ""
     },
-    "postStartCommand": "bash download-vocab-files.sh",
+    "postStartCommand": "bash download-files.sh"
 }
